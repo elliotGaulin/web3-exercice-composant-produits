@@ -1,11 +1,5 @@
 <div class="row">
-  <div class="col-12">
-    <app-fiche-produit></app-fiche-produit>
+  <div class="col-12" *ngFor="let produit of produits">
+    <app-fiche-produit [produit]="produit"></app-fiche-produit>
   </div>
-  <div class="col-12">
-    <app-fiche-produit></app-fiche-produit>
-  </div>
-    <div class="col-12">
-        <app-fiche-produit></app-fiche-produit>
-    </div>
 </div>

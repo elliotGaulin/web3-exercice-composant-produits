@@ -1,4 +1,4 @@
-<div class="container-fluid">
+<div class="p-2">
     <div class="row">
         <div class="col-12">
             Fiche produit
@@ -9,10 +9,10 @@
             <img src="https://via.placeholder.com/150">
         </div>
         <div class="col-md-6">
-            <app-info-produit></app-info-produit>
+            <app-info-produit [name]="produit.name" [description]="produit.description"></app-info-produit>
         </div>
         <div class="col">
-            <app-prix-produit></app-prix-produit>
+            <app-prix-produit [price]="produit.price"></app-prix-produit>
             <app-lien-details></app-lien-details>
         </div>
     </div>
