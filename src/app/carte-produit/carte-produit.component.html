@@ -1,0 +1,15 @@
+<mat-card class="example-card m-2" [ngClass]="{'vedette' : produit.vedette}">
+    <mat-card-title-group>
+      <mat-card-title>{{produit.name}}</mat-card-title>
+      <mat-card-subtitle [ngClass]="{'bad-price' : produit.discount > 0}">{{produit.price}} $</mat-card-subtitle>
+      <mat-card-subtitle *ngIf="produit.discount > 0">Rabais : {{produit.discount}} $</mat-card-subtitle>
+      <mat-card-subtitle *ngIf="produit.discount > 0">Prix avec rabais : {{produit.price - produit.discount}} $</mat-card-subtitle>
+      <mat-card-subtitle>Quantité : {{produit.quantity}}</mat-card-subtitle>
+      <mat-card-subtitle *ngIf="produit.quantity <= 5 && produit.quantity > 0">Quantité limité!</mat-card-subtitle>
+      <mat-card-subtitle *ngIf="produit.quantity <= 0">Non disponible :(</mat-card-subtitle>
+      <img mat-card-sm-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" >
+    </mat-card-title-group>
+    <mat-card-content>
+      {{produit.description}}
+    </mat-card-content>
+  </mat-card>

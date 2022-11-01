@@ -10,6 +10,15 @@ import { InfoProduitComponent } from './info-produit/info-produit.component';
 import { PiedProduitComponent } from './pied-produit/pied-produit.component';
 import { PrixProduitComponent } from './prix-produit/prix-produit.component';
 import { LienDetailsComponent } from './lien-details/lien-details.component';
+import { ListeProduitsCartesComponent } from './liste-produits-cartes/liste-produits-cartes.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatListModule } from '@angular/material/list';
+import { MatDividerModule } from '@angular/material/divider';
+import { MatCardModule } from '@angular/material/card';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatIconModule} from '@angular/material/icon';
+import {MatButtonModule} from '@angular/material/button';
+import { CarteProduitComponent } from './carte-produit/carte-produit.component';
 
 @NgModule({
   declarations: [
@@ -20,11 +29,20 @@ import { LienDetailsComponent } from './lien-details/lien-details.component';
     InfoProduitComponent,
     PiedProduitComponent,
     PrixProduitComponent,
-    LienDetailsComponent
+    LienDetailsComponent,
+    ListeProduitsCartesComponent,
+    CarteProduitComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    MatListModule,
+    MatDividerModule,
+    MatCardModule,
+    MatToolbarModule,
+    MatIconModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

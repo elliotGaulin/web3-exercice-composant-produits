@@ -3,4 +3,7 @@ export interface Produit {
     name: string;
     price: number;
     description: string;
+    quantity: number;
+    discount: number;
+    vedette: boolean;
 }
