@@ -13,7 +13,7 @@ export class ProduitFormComponent implements OnInit {
 
   constructor() { 
     this.produit = {
-      id: 0,
+      _id: '',
       name: '',
       price: 0,
       description: '',
@@ -30,7 +30,7 @@ export class ProduitFormComponent implements OnInit {
   onClick(): void {
     this.addProduit(this.produit);
     this.produit = {
-      id: 0,
+      _id: '',
       name: '',
       price: 0,
       description: '',

@@ -1,23 +1,7 @@
 <mat-toolbar>
-  <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
-   <mat-icon>menu</mat-icon>
-   <span>My App</span>
- </button>
+  <button class="mx-2" mat-raised-button routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" #rla="routerLinkActive" [color]="rla.isActive ? 'primary' : 'secondary'" routerLink="/">Accueil</button>
+  <button class="mx-2" mat-raised-button routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" #rla2="routerLinkActive" [color]="rla2.isActive ? 'primary' : 'secondary'" routerLink="/gestion">Gestion</button>
 </mat-toolbar>
 <div class="container-fluid">
-
-  <div class="row">
-    <div class="col-12">
-      <app-entete></app-entete>
-    </div>
-    <div class="col-12">
-      <app-liste-produits-cartes [produits]="produits"></app-liste-produits-cartes>
-    </div>
-    <div class="col-12">
-      <app-produit-form [addProduit]="addProduit"></app-produit-form>
-    </div>
-    <div class="col-12">
-      <app-pied-produit></app-pied-produit>
-    </div>
-  </div>
+  <router-outlet></router-outlet>
 </div>

@@ -22,6 +22,11 @@ import { CarteProduitComponent } from './carte-produit/carte-produit.component';
 import { ProduitFormComponent } from './produit-form/produit-form.component';
 import { FormsModule } from '@angular/forms';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
+import { HttpClientModule } from '@angular/common/http';
+import { ProduitService } from './produit.service';
+import { Page1Component } from './page1/page1.component';
+import { GestionProduitComponent } from './gestion-produit/gestion-produit.component';
+import {MatTableModule} from '@angular/material/table'; 
 
 @NgModule({
   declarations: [
@@ -35,7 +40,9 @@ import { MatAutocompleteModule } from '@angular/material/autocomplete';
     LienDetailsComponent,
     ListeProduitsCartesComponent,
     CarteProduitComponent,
-    ProduitFormComponent
+    ProduitFormComponent,
+    Page1Component,
+    GestionProduitComponent
   ],
   imports: [
     BrowserModule,
@@ -48,9 +55,11 @@ import { MatAutocompleteModule } from '@angular/material/autocomplete';
     MatIconModule,
     MatButtonModule,
     FormsModule,
-    MatAutocompleteModule
+    MatAutocompleteModule,
+    HttpClientModule,
+    MatTableModule
   ],
-  providers: [],
+  providers: [ProduitService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
