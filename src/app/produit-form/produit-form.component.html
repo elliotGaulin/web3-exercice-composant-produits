@@ -1,0 +1,21 @@
+<form #produitForm="ngForm">
+    {{ produit | json }}
+    <br>
+    <br>
+    Name : <input type="text" id="name" required [(ngModel)]="produit.name" name="name"><br>
+    Price : <input type="number" id="price" required [(ngModel)]="produit.price" name="price"><br>
+    Description : <textarea id="description" name="description" required [(ngModel)]="produit.description"></textarea><br>
+    Quantité : <input type="number" id="quantity" required [(ngModel)]="produit.quantity" name="quantity"><br>
+    
+    Vedette : <input type="checkbox" id="vedette" required [(ngModel)]="produit.vedette" name="vedette"><br>
+
+    <mat-autocomplete #auto="matAutocomplete">
+        <mat-option *ngFor="let category of categories" [value]="category">
+          {{category}}
+        </mat-option>
+      </mat-autocomplete>
+
+    Category : <input type="text" id="category" required [(ngModel)]="produit.category" name="category" [matAutocomplete]="auto"><br>
+
+    <button (click)="onClick()">Ajouter</button>
+</form>

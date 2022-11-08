@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-
+import { Produit } from './produit';
+import { PRODUITS } from './mock';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -7,4 +8,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'exercice-composants-produits';
+  produits : Produit[] = PRODUITS;
+
+  addProduit = (produit: Produit) : void => {
+    this.produits.push(produit);
+  }
 }

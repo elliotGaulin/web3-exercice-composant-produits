@@ -11,7 +11,10 @@
       <app-entete></app-entete>
     </div>
     <div class="col-12">
-      <app-liste-produits-cartes></app-liste-produits-cartes>
+      <app-liste-produits-cartes [produits]="produits"></app-liste-produits-cartes>
+    </div>
+    <div class="col-12">
+      <app-produit-form [addProduit]="addProduit"></app-produit-form>
     </div>
     <div class="col-12">
       <app-pied-produit></app-pied-produit>
